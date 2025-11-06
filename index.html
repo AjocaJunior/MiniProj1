@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assis Caetano — CV SPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header>
+       <div class="profile-header">
+      <img src="img/AssisJrPhoto.png" alt="MyPic" class="profile-pic" />
+      <div class="profile-info">
+        <h1>{{ nome }}</h1>
+        <p>{{ titulo }}</p>
+      </div>
+    </div>
+
+      <nav>
+        <router-link to="/quem"     class="tab">Quem Sou Eu?</router-link>
+        <router-link to="/faco"     class="tab">O Que Faço?</router-link>
+        <router-link to="/hobbies"  class="tab">Hobbies</router-link>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <router-view></router-view>
+      </div>
+    
+    </main>
+
+    <footer>
+      <small>© 2025 Assis Caetano — Curriculum Vitae SPA</small>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/assis.junior.739" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/ajocajunior/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AjocaJunior/MiniProj1" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/ajocajunior/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.prod.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
